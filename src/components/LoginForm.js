@@ -18,7 +18,8 @@ class LoginForm extends React.Component {
 
   submitForm = e => {
     e.preventDefault()
-
+    
+//The onSubmit callback prop should only be called if both fields are filled in (with any value).
     if(!this.state.username || !this.state.password) return
       this.props.handleLogin(this.state)
   }
